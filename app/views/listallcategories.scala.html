@@ -1,0 +1,11 @@
+@(categories: List[models.Category])
+
+@index("Listing all categories") {
+	Here is a list of all categories (@categories.size() categories in total):<br>
+
+	<ul>
+		@for(category <- categories){
+			<li><a href="/show-one-category/@category.getCategoryId()">@category.getCategoryName()</a></li>
+		}
+	</ul>
+}

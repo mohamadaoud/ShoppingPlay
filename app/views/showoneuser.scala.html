@@ -1,0 +1,9 @@
+
+@(user: models.User)
+
+@index("Showing one user") {
+	User name: @user.getFirstName()  @user.getLastName()<br>
+	User address: @user.getAddress() <br>
+	User telephone-number: @user.getPhoneNumber() <br>
+	User email: @user.getEmail()
+}

@@ -1,0 +1,11 @@
+@(users: List[models.User])
+
+@index("Listing all users") {
+	Here is a list of all users (@users.size() users in total):<br>
+
+	<ul>
+		@for(user <- users){
+			<li><a href="/show-one-user/@user.getUserId()">@user.getFirstName() @user.getLastName()</a></li>
+		}
+	</ul>
+}

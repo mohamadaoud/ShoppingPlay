@@ -1,0 +1,11 @@
+@(basket: List[models.ShoppingBasket])
+
+@index("List shopping basket") {
+	Here is a list of shopping basket (@basket.size() in total):<br>
+
+	<ul>
+		@for(basket <- basket){
+			<li>@basket.getQuantity()</li>
+		}
+	</ul>
+}

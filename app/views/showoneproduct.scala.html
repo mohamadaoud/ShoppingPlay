@@ -1,0 +1,8 @@
+
+@(product: models.Product)
+
+@index("Showing one Product") {
+	Product name: @product.getName()<br>
+	Product description: @product.getDescription() <br>
+	Price: @product.getCost():-
+}
